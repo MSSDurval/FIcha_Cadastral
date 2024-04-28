@@ -1,0 +1,93 @@
+<!Doctype html lang="pt_BR">
+<html>
+    <head>
+        <title>Formulário HTML</title>
+        <meta viewport="">
+    </head>
+    <body>
+        <h1>Preencha a Ficha Abaixo:</h1>
+        <form action="/pagina-processa-dados-do-formulario" method="post">
+        
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <label for="nome">Nome Completo:</label>
+                <input type="text" minlength="3" id="nome" >
+
+                <label for="idade">Idade:</label>
+                <input type="number" minlength="18" id="idade">
+
+                <label for="tel">Número de Celular:</label>
+                <input type="tel" placeholder="21 91234-5678" pattern="[0-9] {2} [0-9] {5}-[0-9] {4}">
+
+                <label for="tel">Número Residencial:</label>
+                <input type="tel" placeholder="21 1234-5678 " pattern="[0-9] {2} [0-9] {4}-[0-9] {4}">
+
+                <label for="d_nascimento">Data de Nascimento:</label>
+                <input type="text" id="d_nascimento">
+
+                <label for="cpf">CPF:</label>
+                <input type="cpf" minlength="11" maxlength="11" id="cpf" required>
+
+                <label for="RG">Registro Geral:</label>
+                <input type="RG" minlegth="11" maxlength="11" id="RG" required>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+
+                <label for="cep">Seu Cep</label>
+                <input type="cep" maxlength="7" id="cep">
+
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade">
+
+                <label for="tipo_endereco">Tipo de Endereço</label>
+                <select id="tipo_endereco">
+                    <option value="">Selecione</option>
+                    <option value="rua">Rua</option>
+                    <option value="estrada">Estrada</option>
+                    <option value="avenida">Avenida</option>
+                    <option value="cruzamento">Cruzamento</option>
+                    <option value="rodovia">Rodovia</option>
+                    <option value="outros">Outros</option>
+                </select>
+
+                <label for="lougradouro_endereco">Lougradouro</label>
+                <input type="text" id="lougradouro_endereco">
+
+                <label for="n">Nº</label>
+                <input type="number" maxlength="5" id="n">
+
+               <label for="complemento_endereco">Complemento</label>
+               <input type="complemento_endereco" id="complemento_endereco">
+            </fieldset>
+
+            <fieldset>
+                <legend>Fale Conosco</legend>
+
+                <label for="msg">Menssagem</label>
+                <textarea id="msg"> </textarea>
+            </fieldset>
+            
+            <fieldset>
+                <label for="avaliacao">Nos Avalie:</label>
+                <input type="radio" name="tipo_msg" value="Excelente">
+                <label>Excelente</label>
+                <input type="radio" name="tipo_msg" value="Bom">
+                <label>Bom</label>
+                <input type="radio" name="tipo_msg" value="OK">
+                <label>Ok</label>
+                <input type="radio" name="tipo_msg" value="Ruim">
+                <label>Ruim</label>
+                <input type="radio" name="tipo_msg" value="Pessimo">
+                <label>Péssimo</label>
+            </fieldset>
+
+            <fieldset>
+                <button type="submit">Confirma</button>
+                <button type="reset">Limpar Dados</button>
+            </fieldset>
+        </form>
+    </body>
